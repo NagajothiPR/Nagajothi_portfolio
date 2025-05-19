@@ -31,8 +31,9 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
  <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+ <div class="dark-toggle-wrapper">
      <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-
+</div>
 
     <div id="voice-search-btn" title="Click to search, say About/Home/Contact/Projects">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -155,37 +156,36 @@
 </section>
 
 
+<div id="contact">
+  <h4 class="contact-subheading">Connect with me</h4>
+  <h2 class="contact-heading">Get in touch</h2>
+  <p class="contact-text">
+    I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
+  </p>
 
-  <h2 class="text-center mb-4">Contact Me</h2>
-  <div class="contact-container" id="contact">
-   
-    <form id="contactForm" novalidate>
-      <div class="row">
-        <div class="input-group">
-          <input type="text" id="name" placeholder="Enter your name" />
-          <div id="nameError" class="error"></div>
-          <div id="nameSuccess" class="success"></div>
-        </div>
-        <div class="input-group">
-          <input type="email" id="email" placeholder="Enter your email" />
-          <div id="emailError" class="error"></div>
-          <div id="emailSuccess" class="success"></div>
-        </div>
+  <!-- Bordered container starts -->
+  <div class="contact-form-wrapper" id="contact">
+    <form method="POST" action="https://api.web3forms.com/submit">
+      <input type="hidden" name="access_key" value="d309703e-c885-49bd-8f02-fd0643ae38ba">
+
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
       </div>
 
-      <div class="input-group">
-        <textarea id="message" placeholder="Enter your message"></textarea>
-        <div id="messageError" class="error"></div>
-        <div id="messageSuccess" class="success"></div>
-      </div>
+      <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
 
-      <button type="submit" class="submit-now mt-3">Submit now ➜</button>
+      <button type="submit">
+        Submit now
+        <img src="./images/right-arrow-white.png" alt="">
+      </button>
     </form>
   </div>
-  <footer>
+  <!-- Bordered container ends -->
+</div>
 
-<!-- ----------- footer ---------  -->
- <div class="mt-5">
+  <footer>
+   <div class="mt-5">
     <div class="text-center">
      
         <div class="w-max flex items-center gap-2 mx-auto">
@@ -202,6 +202,8 @@
         </ul>
     </div>
  </div>
-<script src="script.js"></script>
+<script src="script.js">  
+
+</script>
 </body>
 </html>
